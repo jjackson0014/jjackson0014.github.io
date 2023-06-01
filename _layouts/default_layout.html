@@ -3,9 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <!-- Link to the stylesheet for sass css -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
   <body>
     {% include navigation.html %}
-    {{ content }}
+    <div class="panel">
+      <div class="scroll-box">
+        {{ content }}
+      </div>
+    </div>
+    
   </body>
 </html>

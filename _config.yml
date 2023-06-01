@@ -1,8 +1,4 @@
-# FILE: _config.yml
-# LAST EDIT: JJACKSON
-# SUMMARY: Site settings and variables that serve as defaults to be accessed elsewhere in the application
-#
-# Site settings
+## Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
@@ -19,10 +15,32 @@ instagram_username: linksandbuild_
 github_username:  jjackson0014
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 markdown: kramdown
+
+# Collection Configuration
+collections:
+  projects:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default_layout"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

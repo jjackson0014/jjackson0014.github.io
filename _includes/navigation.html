@@ -1,4 +1,11 @@
 <nav>
-    <a href="/">Home</a>
-    <a href="about_me.html">About Me</a>
-  </nav>
+  <!-- For loop that loops through item/link pairs stored in the  navigation.yml file  -->
+  {% for item in site.data.navigation %}
+    <!-- Current link is conditionally formatted based on class -->
+    <a href="{{ item.link }}" {% if page.url == item.link %} class = "current" {% endif %}>
+      {{ item.name }}
+    </a>
+  {% endfor %}
+</nav>
+
+
