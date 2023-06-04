@@ -1,18 +1,21 @@
 <!doctype html>
 <html>
+  <!-- Header level definitions and imports -->
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <!-- Link to the stylesheet for sass css -->
     <link rel="stylesheet" href="/assets/css/styles.css">
   </head>
+  <!-- Below are the actual website contents -->
   <body>
-    {% include navigation.html %}
-    <div class="panel">
-      <div class="scroll-box">
-        {{ content }}
+      <!-- Navigation Panel along the top of the page -->
+      <div class="navigation">
+      {% include navigation.html %}
       </div>
+    <!-- Site Specific Content -->
+    <div>
+        {{ content }}
     </div>
-    
   </body>
 </html>

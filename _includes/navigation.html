@@ -1,11 +1,17 @@
-<nav>
-  <!-- For loop that loops through item/link pairs stored in the  navigation.yml file  -->
-  {% for item in site.data.navigation %}
-    <!-- Current link is conditionally formatted based on class -->
-    <a href="{{ item.link }}" {% if page.url == item.link %} class = "current" {% endif %}>
-      {{ item.name }}
-    </a>
-  {% endfor %}
+<nav class = "navigation">
+  <div class = "blog_title">
+    {{ site.title }}
+  </div> 
+  <div class = "logo_pic">
+    <img src = "/assets/images/logo_1.jpg" alt="logo">
+  </div>
+  <div class = "nav_links">
+      <!-- For loop that loops through item/link pairs stored in the  navigation.yml file  -->
+      {% for item in site.data.navigation %}
+        <span {% if page.url == item.link %} class = "current" {% else %} class = "noncurrent" {% endif %}>
+          <!-- Current link is conditionally formatted based on class -->
+          <a href="{{ item.link }}">{{ item.name }}</a>
+        </span>
+      {% endfor %}
+  </div>
 </nav>
-
-

@@ -3,16 +3,14 @@ layout: default_layout
 title: Home Page
 ---
 <body>
-    <h1>{{ "Hello World!" | downcase }}</h1>
-    <h1>{{ site.title }}</h1>
     <!-- Post Stream -->
-    <h1>Latest Posts</h1>
-    <ul>
+    <ul class ="panel">
+      <h1><center> Latest Posts </center></h1>
         {% for post in site.posts %}
-          <li>
-            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            {{ post.excerpt }}
-          </li>
+          <div class="post">
+              <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+              {{ post.excerpt }}
+          </div>
         {% endfor %}
-      </ul>
+        </ul>
 </body>
