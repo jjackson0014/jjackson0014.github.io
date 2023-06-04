@@ -7,7 +7,7 @@
 title: Links and Build
 email: jjackson0014@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Sharing knowledge
+  Sharing what I learn as I work on new programming and electronics projects. Thanks for visting!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jjackson0014.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 domain: jjackson0014.github.io
@@ -15,7 +15,7 @@ instagram_username: linksandbuild_
 github_username:  jjackson0014
 
 # Build settings
-# theme: minima
+# theme: ''
 plugins:
   - jekyll-feed
   - jekyll-sitemap
